@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import daw2.APIFirst.Alumne;
-
+// Clase Controlador
 public class AlumneControlador {
 
 	@GetMapping("/api/alumne")
