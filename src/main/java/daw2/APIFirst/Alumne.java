@@ -9,6 +9,9 @@ public class Alumne {
 	private String cognom2;
 	private LocalDate dataNaixement;
 	private String dni;
+	private int classestotals;
+	private int faltes;
+	private int faltesJust;
 	
 	//To string
 	@Override
