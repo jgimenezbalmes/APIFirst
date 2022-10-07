@@ -17,7 +17,7 @@ public class Alumne {
 	@Override
 	public String toString() {
 		return "Alumne [nom=" + nom + ", cognom1=" + cognom1 + ", cognom2=" + cognom2 + ", dataNaixement="
-				+ dataNaixement + ", dni=" + dni + "]";
+				+ dataNaixement + ", dni=" + dni +", classestotals=" + classestotals+", faltes=" + faltes + ", faltesJust="+faltesJust+ "]";
 	}
 
 	//Getters i setters
@@ -60,16 +60,43 @@ public class Alumne {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
+
+	public String getClassestotals() {
+		return classestotals;
+	}
+
+	public void setClassestotals(int classestotals) {
+		this.classestotals = classestotals;
+	}
+
+	public String getFaltes() {
+		return faltes;
+	}
+
+	public void setFaltes(int faltes) {
+		this.faltes = faltes;
+	}
 	
+	public String getFaltesJust() {
+		return faltes;
+	}
+
+	public void setFaltesJust(int faltesJust) {
+		this.faltesJust = faltesJust;
+	}
+
 	//Constructors
 
-	public Alumne(String nom, String cognom1, String cognom2, LocalDate dataNaixement, String dni) {
+	public Alumne(String nom, String cognom1, String cognom2, LocalDate dataNaixement, String dni, int classestotals, int faltes, int faltesJust) {
 		super();
 		this.nom = nom;
 		this.cognom1 = cognom1;
 		this.cognom2 = cognom2;
 		this.dataNaixement = dataNaixement;
 		this.dni = dni;
+		this.classestotals = classestotals;
+		this.faltes = faltes;
+		this.faltesJust=faltesJust;
 	}
 	
 	public Alumne() {
