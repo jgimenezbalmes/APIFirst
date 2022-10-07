@@ -61,7 +61,7 @@ public class Alumne {
 		this.dni = dni;
 	}
 
-	public String getClassestotals() {
+	public int getClassestotals() {
 		return classestotals;
 	}
 
@@ -69,7 +69,7 @@ public class Alumne {
 		this.classestotals = classestotals;
 	}
 
-	public String getFaltes() {
+	public int getFaltes() {
 		return faltes;
 	}
 
@@ -77,7 +77,7 @@ public class Alumne {
 		this.faltes = faltes;
 	}
 	
-	public String getFaltesJust() {
+	public int getFaltesJust() {
 		return faltes;
 	}
 
