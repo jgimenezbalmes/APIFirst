@@ -26,7 +26,7 @@ public class AlumneControlador {
 				LocalDate.of(2001, Month.AUGUST, 21), "34500288N", 4,3,1));
 
 	}
-	
+	// Funcionalitat Api Alumne
 	@GetMapping("api/alumne")
 	public List<Alumne> getAlumnes(){
 		List<Alumne> llistaAlumnes = new ArrayList<>();
@@ -42,18 +42,7 @@ public class AlumneControlador {
 
 	return llistaAlumnes;
 	}
-	
-	@GetMapping("api/alumne/asistencia")
-	public List<String> getAsistencia(){
-		
-		List<String> llistaAlumnes = new ArrayList<>();
-		for (int i=0; i<llistatAssist01.size(); i++)
-			llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " cognom: "+ llistatAssist01.get(i).getCognom1() 
-					+ " Faltes: " + llistatAssist01.get(i).getFaltes() 
-					+ " Clases Totales: "+llistatAssist01.get(i).getClassestotals());
-		
-		return llistaAlumnes;
-	}
+	// Per número de Alumne
 	@GetMapping("api/alumne/{nElement}")
 	public Alumne getAlumnes(@PathVariable int nElement){
 		List<Alumne> llistaAlumnes = new ArrayList<>();
@@ -69,5 +58,30 @@ public class AlumneControlador {
 
 		return llistaAlumnes.get(nElement);
 	}
+	// Funcionalitat Api Asistencia
+		@GetMapping("api/alumne/asistencia")
+		public List<String> getAsistencia(){
+			
+			List<String> llistaAlumnes = new ArrayList<>();
+			for (int i=0; i<llistatAssist01.size(); i++)
+				llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " cognom: "+ llistatAssist01.get(i).getCognom1() 
+						+ " Faltes: " + llistatAssist01.get(i).getFaltes() 
+						+ " Clases Totales: "+llistatAssist01.get(i).getClassestotals());
+			
+			return llistaAlumnes;
+		}
+		// Per número de Asistencia
+		@GetMapping("api/alumne/asistencia/{nElement}")
+		public String getAsistencia(@PathVariable int nElement){
+			
+			List<String> llistaAlumnes = new ArrayList<>();
+			for (int i=0; i<llistatAssist01.size(); i++)
+				llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " cognom: "+ llistatAssist01.get(i).getCognom1() 
+						+ " Faltes: " + llistatAssist01.get(i).getFaltes() 
+						+ " Clases Totales: "+llistatAssist01.get(i).getClassestotals());
+			
+			return llistaAlumnes.get(nElement);
+		}
+
 	
 }
