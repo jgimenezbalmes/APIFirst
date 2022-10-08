@@ -23,7 +23,7 @@ public class AlumneControlador {
 		llistatAssist01.add(new Alumne("Carlos", "Hernandez", "Jorge",
 				LocalDate.of(2001, Month.APRIL, 21), "84366915V", 5, 1, 0));
 		llistatAssist01.add(new Alumne("Alexis", "Gutierrez", "Jorge", 
-				LocalDate.of(2001, Month.AUGUST, 21), "34500288N", 4,0,1));
+				LocalDate.of(2001, Month.AUGUST, 21), "34500288N", 4,2,1));
 
 	}
 	// Funcionalitat Api Alumne
@@ -85,5 +85,30 @@ public class AlumneControlador {
 			return llistaAlumnes.get(nElement);
 		}
 
-	
+		// Faltas justificadas	
+		@GetMapping("api/alumne/faltes")
+		public List<String> getFaltes(){
+		    
+		    List<String> llistaAlumnes = new ArrayList<>();
+		    for (int i=0; i<llistatAssist01.size(); i++)
+		        llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " Cognom: "+ llistatAssist01.get(i).getCognom1() 
+		                + " Faltes: " + llistatAssist01.get(i).getFaltes() 
+		                + " Faltas justificadas: "+llistatAssist01.get(i).getFaltesJust()
+		                + " Percentatge de faltes Justificadas: "+(((double)llistatAssist01.get(i).getFaltesJust()*100)/(llistatAssist01.get(i).getFaltes())) + " %");
+		    
+		    return llistaAlumnes;
+		}
+		
+		@GetMapping("api/alumne/faltes/{nElement}")
+		public String getFaltes(@PathVariable int nElement){
+		    
+		    List<String> llistaAlumnes = new ArrayList<>();
+		    for (int i=0; i<llistatAssist01.size(); i++)
+		        llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " Cognom: "+ llistatAssist01.get(i).getCognom1() 
+		                + " Faltes: " + llistatAssist01.get(i).getFaltes() 
+		                + " Faltes Justificadas: "+llistatAssist01.get(i).getFaltesJust()
+		                + " Percentatge de faltes Justificadas: "+(((double)llistatAssist01.get(i).getFaltesJust()*100)/(llistatAssist01.get(i).getFaltes())) + " %");
+		    
+		    return llistaAlumnes.get(nElement);
+		}
 }
