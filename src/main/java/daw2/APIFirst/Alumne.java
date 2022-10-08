@@ -78,7 +78,7 @@ public class Alumne {
 	}
 	
 	public int getFaltesJust() {
-		return faltes;
+		return faltesJust;
 	}
 
 	public void setFaltesJust(int faltesJust) {
