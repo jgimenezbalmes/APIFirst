@@ -17,13 +17,13 @@ public class AlumneControlador {
 	private static List<Alumne> llistatAssist01 = new ArrayList<>();
 	static {
 		llistatAssist01.add(new Alumne("Jonathan", "Valle", "Alfaro", 
-				LocalDate.of(2002, Month.FEBRUARY, 20), "26634404J", 3,6,1));
+				LocalDate.of(2002, Month.FEBRUARY, 20), "26634404J", 6,3,1));
 		llistatAssist01.add(new Alumne("Gonzalo", "Mendoza", "Garcia",
-				LocalDate.of(2004, Month.AUGUST, 18), "0046149D", 3,5,2));
+				LocalDate.of(2004, Month.AUGUST, 18), "0046149D", 5,3,2));
 		llistatAssist01.add(new Alumne("Carlos", "Hernandez", "Jorge",
-				LocalDate.of(2001, Month.APRIL, 21), "84366915V", 3, 5, 2));
+				LocalDate.of(2001, Month.APRIL, 21), "84366915V", 5, 1, 0));
 		llistatAssist01.add(new Alumne("Alexis", "Gutierrez", "Jorge", 
-				LocalDate.of(2001, Month.AUGUST, 21), "34500288N", 4,3,1));
+				LocalDate.of(2001, Month.AUGUST, 21), "34500288N", 4,0,1));
 
 	}
 	// Funcionalitat Api Alumne
@@ -32,9 +32,9 @@ public class AlumneControlador {
 		List<Alumne> llistaAlumnes = new ArrayList<>();
 		
 		llistaAlumnes.add(new Alumne("Jonathan", "Valle", "Alfaro", 
-				LocalDate.of(2002, Month.FEBRUARY, 20), "26634404J", 3,6,1));
+				LocalDate.of(2002, Month.FEBRUARY, 20), "26634404J", 6,3,1));
 		llistaAlumnes.add(new Alumne("Gonzalo", "Mendoza", "Garcia",
-				LocalDate.of(2004, Month.AUGUST, 18), "0046149D", 3,5,2));
+				LocalDate.of(2004, Month.AUGUST, 18), "0046149D", 5,3,2));
 		llistaAlumnes.add(new Alumne("Carlos", "Hernandez", "Jorge",
 				LocalDate.of(2001, Month.APRIL, 21), "84366915V", 3, 5, 2));
 		llistaAlumnes.add(new Alumne("Alexis", "Gutierrez", "Jorge", 
@@ -52,7 +52,7 @@ public class AlumneControlador {
 		llistaAlumnes.add(new Alumne("Gonzalo", "Mendoza", "Garcia",
 				LocalDate.of(2004, Month.AUGUST, 18), "0046149D", 3,5,2));
 		llistaAlumnes.add(new Alumne("Carlos", "Hernandez", "Jorge",
-				LocalDate.of(2001, Month.APRIL, 21), "84366915V", 3, 5, 2));
+				LocalDate.of(2001, Month.APRIL, 21), "84366915V", 5, 1, 0));
 		llistaAlumnes.add(new Alumne("Alexis", "Gutierrez", "Jorge",
 				LocalDate.of(2001, Month.AUGUST, 21), "34500288N", 4,3,1));
 
@@ -64,9 +64,10 @@ public class AlumneControlador {
 			
 			List<String> llistaAlumnes = new ArrayList<>();
 			for (int i=0; i<llistatAssist01.size(); i++)
-				llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " cognom: "+ llistatAssist01.get(i).getCognom1() 
+				llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " Cognom: "+ llistatAssist01.get(i).getCognom1() 
 						+ " Faltes: " + llistatAssist01.get(i).getFaltes() 
-						+ " Clases Totales: "+llistatAssist01.get(i).getClassestotals());
+						+ " Classes Totals: "+llistatAssist01.get(i).getClassestotals()
+						+ " Percentatge de faltes: "+(((double)llistatAssist01.get(i).getFaltes()*100)/(llistatAssist01.get(i).getClassestotals())) + " %");
 			
 			return llistaAlumnes;
 		}
@@ -76,9 +77,10 @@ public class AlumneControlador {
 			
 			List<String> llistaAlumnes = new ArrayList<>();
 			for (int i=0; i<llistatAssist01.size(); i++)
-				llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " cognom: "+ llistatAssist01.get(i).getCognom1() 
+				llistaAlumnes.add("Nom: "+llistatAssist01.get(i).getNom()+ " Cognom: "+ llistatAssist01.get(i).getCognom1() 
 						+ " Faltes: " + llistatAssist01.get(i).getFaltes() 
-						+ " Clases Totales: "+llistatAssist01.get(i).getClassestotals());
+						+ " Classes Totals: "+llistatAssist01.get(i).getClassestotals()
+						+ " Percentatge de faltes: "+(((double)llistatAssist01.get(i).getFaltes()*100)/(llistatAssist01.get(i).getClassestotals())) + " %");
 			
 			return llistaAlumnes.get(nElement);
 		}
