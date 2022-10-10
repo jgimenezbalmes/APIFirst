@@ -12,12 +12,14 @@ public class Alumne {
 	private int classestotals;
 	private int faltes;
 	private int faltesJust;
+	private String grup;
+	private String email;
 	
 	//To string
 	@Override
 	public String toString() {
 		return "Alumne [nom=" + nom + ", cognom1=" + cognom1 + ", cognom2=" + cognom2 + ", dataNaixement="
-				+ dataNaixement + ", dni=" + dni +", classestotals=" + classestotals+", faltes=" + faltes + ", faltesJust="+faltesJust+ "]";
+				+ dataNaixement + ", dni=" + dni + ", grup=" +grup +", email"+email+", classestotals=" + classestotals+", faltes=" + faltes + ", faltesJust="+faltesJust+ "]";
 	}
 
 	//Getters i setters
@@ -85,9 +87,25 @@ public class Alumne {
 		this.faltesJust = faltesJust;
 	}
 
+	public String getGrup() {
+		return grup;
+	}
+
+	public void setGrup(String grup) {
+		this.grup = grup;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	//Constructors
 
-	public Alumne(String nom, String cognom1, String cognom2, LocalDate dataNaixement, String dni, int classestotals, int faltes, int faltesJust) {
+	public Alumne(String nom, String cognom1, String cognom2, LocalDate dataNaixement, String dni, int classestotals, int faltes, int faltesJust, String grup, String email) {
 		super();
 		this.nom = nom;
 		this.cognom1 = cognom1;
@@ -97,6 +115,8 @@ public class Alumne {
 		this.classestotals = classestotals;
 		this.faltes = faltes;
 		this.faltesJust=faltesJust;
+		this.grup=grup;
+		this.email=email;
 	}
 	
 	public Alumne() {
