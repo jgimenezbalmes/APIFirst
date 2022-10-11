@@ -132,9 +132,102 @@ public class AlumneControlador {
 		    return llistaAlumnes.get(nElement);
 		}
 		
+		
+		@GetMapping("api/alumne/smix1")
+		public List<String> getGrupAlumne(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("SMIX1")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/smix2")
+		public List<String> getGrupAlumne2(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("SMIX2")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/daw1")
+		public List<String> getGrupAlumne3(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("DAW1")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/daw2")
+		public List<String> getGrupAlumne4(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("DAW2")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/dam1")
+		public List<String> getGrupAlumne5(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("DAM1")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/dam2")
+		public List<String> getGrupAlumne6(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("DAW2")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/asix1")
+		public List<String> getGrupAlumne7(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("ASIX1")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		@GetMapping("api/alumne/asix2")
+		public List<String> getGrupAlumne8(){
+			
+			List<String> llistaGrup = new ArrayList<>();
+			for(int i=0; i<llistatAssist01.size(); i++) {
+				if(llistatAssist01.get(i).getGrup().toUpperCase().equals("ASIX2")) {
+					llistaGrup.add("Grup: "+llistatAssist01.get(i).getGrup()+", Nom: "+llistatAssist01.get(i).getNom()+ ", Cognom: "+ llistatAssist01.get(i).getCognom1()+", Email: "+llistatAssist01.get(i).getEmail());
+				}
+			}
+			return llistaGrup;
+		}
+		
 		//Mapping per a retorn de grup
 		@GetMapping("api/grup")
 		public List<Grup> getGrup(){
+			
 			return llistagrups;
 		}
+		
+	
 }
